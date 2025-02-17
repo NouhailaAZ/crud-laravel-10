@@ -15,6 +15,11 @@
                 <hr>
                 <a href="/ajouter" class="btn btn-primary">Ajouter un étudiant</a>
                 <hr>
+                @if(session('status'))
+                    <div class ="alert alert-success">
+                        {{session('status')}}
+                    </div>
+                @endif
                 <table class="table">
                     <thead>
                         <tr>

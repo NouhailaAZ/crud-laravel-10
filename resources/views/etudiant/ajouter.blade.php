@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12">
-                <h1>AJOUTER UN ETUDIANT IN LARAVEL 10</h1>
+                <h1>AJOUTER UN ETUDIANT - LARAVEL 10</h1>
                 <hr>
 
                 @if(session('status'))
@@ -28,22 +28,22 @@
                 <form action="/ajouter/traitement" method="POST" class="form-group">
                     @csrf
                     <div class="form-group">
-                        <label for="nom">First Name</label>
+                        <label for="nom">NOM</label>
                         <input type="text" name="nom" class="form-control">
 
                     </div>
                     <div class="form-group">
-                        <label for="prenom">Last Name</label>
+                        <label for="prenom">PRENOM</label>
                         <input type="text" name="prenom" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="classe">Class</label>
+                        <label for="classe">CLASSE</label>
                         <input type="text" name="classe" class="form-control">
                     </div>
                     <br>
                     <a href="/etudiant" class="btn btn-secondary">Close</a>
                     <!-- <input type="submit" class="btn btn-success" name="add_students" value="ADD"/> -->
-                    <button type="submit" class="btn btn-success">ADD</button>
+                    <button type="submit" class="btn btn-success">Ajouter</button>
 
                 </form>
             </div>
