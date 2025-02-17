@@ -29,7 +29,7 @@ class EtudiantController extends Controller
         $etudiant->classe = $request->classe;
         $etudiant->save();
 
-        return redirect('/ajouter')->with('status','L\étudiant a bien été ajouté avec succes.');
+        return redirect('/etudiant')->with('status','L\'étudiant a bien été ajouté avec succes.');
     }
 
     public function update_etudiant($id){
@@ -49,7 +49,13 @@ class EtudiantController extends Controller
         $etudiant->classe = $request->classe;
         $etudiant->update();
 
-        return redirect('/etudiant')->with('status','L\étudiant a bien été modifié avec succes.');
+        return redirect('/etudiant')->with('status','L\'étudiant a bien été modifié avec succes.');
+    }
+
+    public function delete_etudiant($id){
+        $etudiant = Etudiant::find($id);
+        $etudiant->delete();
+        return redirect('/etudiant')->with('status','L\'étudiant a bien été supprimé avec succes.');
     }
 
 }

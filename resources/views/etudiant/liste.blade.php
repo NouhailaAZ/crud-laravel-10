@@ -31,14 +31,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php 
+                            $ide=1;
+                        @endphp
                         @foreach($etudiants as $etudiant)
                             <tr>
-                                <th scope="row">{{$etudiant->id}}</th>
+                                <th scope="row">{{$ide++}}</th>
                                 <td>{{$etudiant->nom}}</td>
                                 <td>{{$etudiant->prenom}}</td>
                                 <td>{{$etudiant->classe}}</td>
                                 <td><a href="/update_etudiant/{{$etudiant->id}}" class="btn btn-info">Update</a></td>
-                                <td><a href="#" class="btn btn-danger">Delete</a></td>
+                                <td><a href="/delete_etudiant/{{$etudiant->id}}" class="btn btn-danger">Delete</a></td>
                             </tr>
                         @endforeach
                     </tbody>
